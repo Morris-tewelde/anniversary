@@ -19,7 +19,7 @@ body{
   position:absolute;
   inset:0;
   width:100vw;
-  height:100vh;
+  height:100dvh; /* ✅ FIX */
   object-fit:cover;
   opacity:0;
   filter:blur(6px) brightness(0.7);
@@ -36,10 +36,17 @@ body{
 
 /* INTRO */
 #intro{
-  position:fixed;inset:0;
-  display:flex;justify-content:center;align-items:center;
-  text-align:center;background:black;z-index:9999;
+  position:fixed;
+  inset:0;
+  height:100dvh; /* ✅ FIX */
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:black;
+  z-index:9999;
 }
+
 .logo{font-size:90px;color:#e50914;}
 .subtitle{margin-top:10px;font-size:22px;}
 
@@ -53,14 +60,23 @@ body{
 
 /* LOCK/JOKE/SUCCESS */
 #lockScreen,#jokeScreen,#successJokeScreen{
-  position:fixed;inset:0;
-  display:flex;flex-direction:column;
-  justify-content:center;align-items:center;
+  position:fixed;
+  inset:0;
+  height:100dvh; /* ✅ FIX */
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
   text-align:center;
 }
 
 /* STORY */
-#story{position:fixed;inset:0;overflow:hidden;}
+#story{
+  position:fixed;
+  inset:0;
+  height:100dvh; /* ✅ FIX */
+  overflow:hidden;
+}
 
 .slides{
   display:flex;
@@ -70,8 +86,7 @@ body{
 
 .slide{
   min-width:100vw;
-  height:100vh;
-
+  height:100dvh; /* ✅ FIX */
   display:grid;
   grid-template-columns:1fr 1fr;
   align-items:center;
@@ -87,12 +102,15 @@ body{
 
 .text{max-width:520px;}
 
+/* ✅ FINAL SLIDE SCROLL FIX */
 .final{
   grid-template-columns:1fr;
   text-align:center;
+  overflow-y:auto;     /* allow scroll */
+  padding-bottom:80px; /* space at bottom */
 }
 
-.finalText{max-width:850px;}
+.finalText{max-width:850px;margin:auto;}
 
 /* ARROWS */
 .nav{
@@ -115,7 +133,7 @@ body{
   animation:floatUp linear forwards;
 }
 @keyframes floatUp{
-  to{transform:translateY(-110vh);opacity:0;}
+  to{transform:translateY(-110dvh);opacity:0;}
 }
 
 /* LANGUAGES */
