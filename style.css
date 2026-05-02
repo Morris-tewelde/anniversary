@@ -1,0 +1,137 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:Georgia,serif;
+  color:white;
+  overflow:hidden;
+  background:black;
+}
+
+/* 🌌 BACKGROUND MEMORY SLIDER */
+#bgSlider{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  overflow:hidden;
+}
+
+#bgSlider img{
+  position:absolute;
+  inset:0;
+  width:100vw;
+  height:100vh;
+  object-fit:cover;
+  opacity:0;
+  filter:blur(6px) brightness(0.7);
+  animation:fadeBg 36s linear infinite;
+}
+
+@keyframes fadeBg{
+  0%{opacity:0;}
+  6%{opacity:1;}
+  22%{opacity:1;}
+  28%{opacity:0;}
+  100%{opacity:0;}
+}
+
+/* INTRO */
+#intro{
+  position:fixed;inset:0;
+  display:flex;justify-content:center;align-items:center;
+  text-align:center;background:black;z-index:9999;
+}
+.logo{font-size:90px;color:#e50914;}
+.subtitle{margin-top:10px;font-size:22px;}
+
+.hidden{display:none!important;}
+
+/* SCREENS TRANSPARENT */
+#lockScreen,#jokeScreen,#successJokeScreen,
+#story,.slide{
+  background:transparent!important;
+}
+
+/* LOCK/JOKE/SUCCESS */
+#lockScreen,#jokeScreen,#successJokeScreen{
+  position:fixed;inset:0;
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  text-align:center;
+}
+
+/* STORY */
+#story{position:fixed;inset:0;overflow:hidden;}
+
+.slides{
+  display:flex;
+  height:100%;
+  transition:transform 0.9s ease-in-out;
+}
+
+.slide{
+  min-width:100vw;
+  height:100vh;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  justify-items:center;
+  padding:40px;
+}
+
+.slide img{
+  width:90%;
+  max-width:420px;
+  border-radius:12px;
+}
+
+.text{max-width:520px;}
+
+.final{
+  grid-template-columns:1fr;
+  text-align:center;
+}
+
+.finalText{max-width:850px;}
+
+/* ARROWS */
+.nav{
+  position:fixed;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:55px;
+  cursor:pointer;
+  z-index:10;
+  user-select:none;
+}
+.left{left:20px;}
+.right{right:20px;}
+
+/* HEARTS */
+.heart{
+  position:fixed;
+  bottom:-20px;
+  color:red;
+  animation:floatUp linear forwards;
+}
+@keyframes floatUp{
+  to{transform:translateY(-110vh);opacity:0;}
+}
+
+/* LANGUAGES */
+#languages span{
+  position:fixed;
+  bottom:-20px;
+  animation:floatUp 8s linear forwards;
+}
+
+/* 📱 MOBILE / TABLET */
+@media(max-width:900px){
+  .slide{
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:25px;
+  }
+  .slide img{max-width:70%;}
+  .logo{font-size:60px;}
+}

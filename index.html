@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Our Story ❤️</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="bgSlider"></div>
+<!-- INTRO -->
+<div id="intro">
+  <div class="introContent">
+    <div class="logo">M + T</div>
+    <div class="subtitle">❤️ Our Love Story መዓረይ ❤️</div><br><br>
+  </div>
+</div>
+
+<!-- PASSWORD -->
+<div id="lockScreen" class="hidden">
+  <h1>❤️ Our Story Mearey ❤️</h1><br><br>
+  <p class="hint">Hint: DDMMYYYY of our Anniversary</p><br><br>
+  <input type="password" id="password"/><br><br>
+  <button id="enterBtn">Enter</button>
+</div>
+
+<!-- WRONG -->
+<div id="jokeScreen" class="hidden">
+  <h2>😂 Really?</h2><br><br>
+  <p>You don't even remember our Anniversary, መዓረይ 😜</p><br><br>
+  <button onclick="backToLogin()">Try again</button>
+</div>
+
+<!-- SUCCESS -->
+<div id="successJokeScreen" class="hidden">
+  <h2>😏 You remembered?</h2><br><br>
+  <p>I would have been surprised if you forgot ❤️</p><br><br>
+  <button onclick="startStory()">Start</button>
+</div>
+
+<!-- STORY -->
+<div id="story" class="hidden">
+
+<audio id="bgMusic" loop>
+  <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="nav left" onclick="prevSlide()">❮</div>
+<div class="nav right" onclick="nextSlide()">❯</div>
+
+<div class="slides">
+
+  <div class="slide">
+    <img src="assets/first_text.jpg"/>
+    <div class="text">
+      <h2>Our very first message መዓረይ 💬</h2><br><br>
+      <p> ❤️ Your first message started everything (even you made a mistake on spelling my name). I am so glad that we met here. መዓረይ  I am forever greatfull for this text thank you my love. this is where it all started . . . the rest is history  ❤️</p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="assets/first_photo.jpg"/>
+    <div class="text">
+      <h2>the first photo You sent me 📷</h2><br><br>
+      <p>The very first photo you sent me — the moment you quietly became something special to me, turning a simple image into the beginning of everything I feel for you. </p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="assets/favorite_photo.jpg"/>
+    <div class="text">
+      <h2>❤️ my favorite photo 📷</h2><br><br>
+      <p>you know how much I love this photo mearey . . . I cant wait until I walk with you wearing your tilfi, shifon . . . I love you sooooo much in your tilfi and shifon.  ❤️ </p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="assets/first_together.jpg"/>
+    <div class="text">
+      <h2>our first photo together 🤍</h2><br><br>
+      <p>Everything became real here. it was worth waiting 8 months for our romantic first meeting mearey ! ❤️ </p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="assets/eiffel_kiss.jpg"/>
+    <div class="text">
+      <h2>our first kiss - Paris</h2><br><br>
+      <p>TIME STOPPED, and the world faded into just you and me. In that quiet moment, our first kiss felt like the beginning of something beautiful—something I knew I’d carry with me long after. .</p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="assets/bruges_trip.jpg"/>
+    <div class="text">
+      <h2>Our first ever trip, to Bruges ❤️ </h2><br><br>
+      <p>Just us, wandering through the charming streets of Bruges, Belgium, where every quiet corner felt like a little piece of magic. And as beautiful as that trip was, I know it’s only the beginning—I can’t wait to spend forever discovering new places with you.
+    </p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="assets/promise.jpg"/>
+    <div class="text">
+      <h2>Our promise to each other ❤️ </h2><br><br>
+      <p> መዓረይ I know we have met with intention and we have made a promise to each other to be together forever. it was at this moment that we have officially become a couple for life, and hope we will remember this place forever.
+    </p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="assets/ethiopia_ceremony.jpg"/>
+    <div class="text">
+      <h2>Our ሽምግልና</h2> <br><br>
+      <p>You became family, and as I told you before you are the best present I have ever received from my parents and at this moment of our ሽምግልና we have become one family. </p>
+    </div>
+  </div>
+
+  
+  <div class="slide final">
+    <div class="finalText">
+      <h1>Happy Anniversary ❤️ ሕፅይተይ ❤️</h1>
+      <br><br>
+      <p>መዓረይ, I know our journey hasn’t always been perfect—we’ve faced difficult moments and times when we didn’t see things the same way. But even through it all, our love has remained strong, and our beautiful memories have always outshine the rest. No matter what comes our way, I believe in us, in the way we keep choosing each other, growing together, and holding on with love. I love you deeply, mearey, and I always will.</p>
+      <br><br>
+      <p>I pray that this is just the beginning of our story—that we celebrate our 2nd, 3rd, 10th, and 20th anniversaries side by side, still in love, still choosing each other, forever.</p>
+      <br><br>
+      <p>we have made it ONE YEAR mearey ❤️ and in this year we have managed to break our distance, make a promise, and ሽምግልና. not bad for a first year my love, am sure lifetime of advanture and love waits for us.  </p>
+      <br><br>
+      <h2>I will love you forever ❤️❤️❤️ሕፅይተይ ❤️❤️❤️</h2>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+<div id="languages"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
